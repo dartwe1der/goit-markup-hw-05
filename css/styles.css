@@ -1,5 +1,14 @@
 /*------all------*/
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -16,6 +25,8 @@ img {
     width: 1158px;
     margin: 0 auto;
     padding: 0 15px 0 15px;
+    flex-direction: column;
+    align-items: center;
 }
 
 ul,
@@ -47,8 +58,12 @@ ol {
     0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.dvhdr {
+.hdr .container {
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
     display: flex;
+    align-items: center;
 }
 
 .dvnv {
@@ -58,14 +73,15 @@ ol {
 
 .logo {
     font-family: "Raleway", sans-serif;
-    color: #4d5ae5;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 16px;
+    color: #4d5ae5;
+    display: flex;
+    align-items: center;
+    margin-right: 76px;
 }
 
 .stdio {
@@ -78,10 +94,16 @@ ol {
 
 .ula {
     display: flex;
+    align-items: flex-start;
     gap: 40px;
 }
 
+.ula:last-child {
+    margin-right: 0;
+}
+
 .nav-li {
+    position: relative;
     padding: 24px 0;
     text-decoration-line: none;
     font-weight: 500;
@@ -98,7 +120,6 @@ ol {
 }
 
 .studio {
-    position: relative;
     color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -116,6 +137,11 @@ ol {
 
 .padre {
     font-style: normal;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 40px;
 }
 
 .padrul {
@@ -123,14 +149,17 @@ ol {
     gap: 40px;
 }
 
+.padrul:last-child {
+    margin-right: 0;
+}
+
+
 .padro {
     text-decoration-line: inherit;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    padding: 24px 0;
-    display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -151,6 +180,7 @@ ol {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0 auto;
 }
 
 .sectiontop-h {
@@ -716,11 +746,13 @@ ol {
 }
 
 .us-privacy-a {
+    text-decoration: underline;
     color: #4D5AE5;
 }
 
 .modal-butt {
     display: block;
+    margin: 0 auto;
     min-width: 169px;
     height: 56px;
     font-family: "Roboto", sans-serif;
