@@ -435,10 +435,12 @@ ol {
     background-color: #2e2f42;
 }
 
-.foot-div {
+.foot .container {
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
     display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .foot-div-div {
